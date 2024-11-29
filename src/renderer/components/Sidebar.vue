@@ -1,10 +1,14 @@
 <template>
-  <div class="w-64 h-screen fixed left-0 top-0 bg-gradient-to-br from-slate-800 to-gray-900 from-0% to-100% text-white p-4 shadow-lg">
+  <div
+    class="w-64 h-screen fixed left-0 top-0 bg-gradient-to-br from-slate-800 to-gray-900 from-0% to-100% text-white p-4 shadow-lg"
+  >
     <!-- Header del Sidebar -->
     <div class="py-4 border-b border-gray-600 mb-6">
       <div class="flex items-center space-x-3 px-4">
         <Droplet class="w-6 h-6 text-blue-400" />
-        <h2 class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+        <h2
+          class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
+        >
           Agua potable
         </h2>
       </div>
@@ -43,10 +47,7 @@
           </div>
 
           <!-- Submenú -->
-          <div
-            v-show="item.isOpen"
-            class="pl-12 space-y-1"
-          >
+          <div v-show="item.isOpen" class="pl-12 space-y-1">
             <router-link
               v-for="child in item.children"
               :key="child.path"
@@ -64,16 +65,17 @@
 
     <!-- Footer del Sidebar -->
     <div class="absolute bottom-0 left-0 w-full p-4 border-t border-gray-700">
-      <div class="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-200">
-      </div>
+      <div
+        class="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-200"
+      ></div>
     </div>
   </div>
 </template>
 
 <script>
-import { 
+import {
   Home,
-  LayoutDashboard, 
+  LayoutDashboard,
   LogOut,
   Sparkles,
   Grid2X2,
@@ -83,8 +85,12 @@ import {
   Settings,
   Users,
   Bell,
-  Database
-} from 'lucide-vue-next'
+  Database,
+  ChartArea,
+  Hammer,
+  HandCoins,
+  FileSearch,
+} from "lucide-vue-next";
 
 export default {
   name: "Sidebar",
@@ -100,39 +106,54 @@ export default {
     Settings,
     Users,
     Bell,
-    Database
+    Database,
+    ChartArea,
+    Hammer,
+    HandCoins,
   },
   data() {
     return {
       menuItems: [
-        { 
-          title: "Inicio", 
-          path: "/", 
-          icon: Home
+        {
+          title: "Inicio",
+          path: "/",
+          icon: Home,
         },
-        { 
+        {
           title: "Tabla de contenido",
           icon: Database,
-          isOpen: false,
           path: "/table",
-          children: [
-            {
-              title: "Tabla de contenido",
-              path: "/table",
-              icon: Grid2X2
-            },
+        },
+        {
+          title: "Carátula",
+          path: "/",
+          icon: Sparkles,
+        },
 
-          ]
+        {
+          title: "Área de polígono",
+          path: "/polygon",
+          icon: ChartArea,
         },
-        { 
-          title: "Carátula", 
-          path: "/info", 
-          icon: Sparkles
+        {
+          title: "Catálogo de obras",
+          path: "/catalog-works",
+          icon: Hammer,
         },
-        { 
-          title: "Salir del programa", 
-          path: "/exit", 
-          icon: LogOut
+        {
+          title: "Costos de tubería",
+          path: "/pipe-cost",
+          icon: HandCoins,
+        },
+        {
+          title: "Tabulador CIPU",
+          path: "/cipu",
+          icon: FileSearch,
+        },
+        {
+          title: "Salir del programa",
+          path: "/exit",
+          icon: LogOut,
         },
       ],
     };
@@ -140,7 +161,7 @@ export default {
   methods: {
     toggleSubmenu(item) {
       item.isOpen = !item.isOpen;
-    }
-  }
+    },
+  },
 };
 </script>

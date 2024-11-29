@@ -1,3 +1,5 @@
+import { Section } from "lucide-vue-next";
+
 export const pages = [
   {
     title: "Introducción",
@@ -32,10 +34,18 @@ export const pages = [
       {
         title: "Cooredenadas UTM",
         ul: [
-          "Al norte: Tochtepec y Tecamachalco 628942.00 m E",
-          "Al oeste: Huitziltepec y Molcaxac ZONA 14",
-          "Al sur: Juan N. Méndez y Tepexi de Rodríguez 2068294.00 m N",
-          "Al este: Yehualtepec y Tlacotepec de Benito Juárez",
+          {
+            text: "Al norte: Tochtepec y Tecamachalco 628942.00 m E",
+          },
+          {
+            text: "Al oeste: Huitziltepec y Molcaxac ZONA 14",
+          },
+          {
+            text: "Al sur: Juan N. Méndez y Tepexi de Rodríguez 2068294.00 m N",
+          },
+          {
+            text: "Al este: Yehualtepec y Tlacotepec de Benito Juárez",
+          },
         ],
         images: ["antecedentes_2.jpg"],
         imagesStyle: "flex w-auto h-[500px]",
@@ -422,10 +432,10 @@ export const pages = [
   },
   {
     title: "Propuesta de Aplicación a Xochitlán de Todos los Santos",
-    subtitle: "Participación activa de la comunidad",
     page: "22",
     section: [
       {
+        subtitle:"Participación activa de la comunidad",
         content:
           "Involucrar a los habitantes en el proceso de toma de decisiones, implementando un enfoque de gestión comunitaria que permita a los habitantes tener un rol activo en la planificación y el mantenimiento de la red.",
         links: [
@@ -560,6 +570,7 @@ export const pages = [
   },
   {
     title: "Tipo de Población en Xochitlán de Todos los Santos",
+    page: "31",
     section: [
       {
         subtitle: "Población dispersa",
@@ -637,7 +648,7 @@ export const pages = [
     page: "34",
     section: [
       {
-        subitle: "Acceso limitado a servicios",
+        subtitle: "Acceso limitado a servicios",
         content:
           "Actualmente, muchas viviendas carecen de acceso directo a agua potable, dependiendo de fuentes naturales como manantiales o ríos, que pueden no estar tratadas adecuadamente. La infraestructura de saneamiento es limitada, lo que agrava los problemas relacionados con la contaminación del agua.",
         links: [
@@ -654,6 +665,7 @@ export const pages = [
     page: "35",
     section: [
       {
+        subtitle: "Diversidad étnica",
         content:
           "En el municipio conviven comunidades indígenas que conservan sus tradiciones, lo que implica la necesidad de incluir en los planes de infraestructura enfoques culturales que respeten las dinámicas sociales y prácticas ancestrales de uso de los recursos naturales, incluyendo el agua.",
       },
@@ -716,6 +728,16 @@ export const pages = [
     section: [
       {
         subtitle: "1. Mejora en la infraestructura de distribución",
+        ul: [
+          {
+            strong: "Propuesta",
+            text: "Crear una red de distribución de agua potable que cubra tanto las zonas más densamente pobladas como aquellas comunidades dispersas, utilizando tecnología adaptable como sistemas de tuberías de baja presión y estaciones de bombeo que aprovechen la topografía.",
+          },
+          {
+            strong: "Impacto",
+            text: "Una red eficiente reducirá la dependencia de fuentes hídricas no tratadas y mejorará la calidad de vida, especialmente en las comunidades más remotas, asegurando que el agua llegue de manera constante a todos los hogares, sin importar su ubicación.",
+          },
+        ],
         links: [
           {
             url: "/page/38",
@@ -747,6 +769,259 @@ export const pages = [
           {
             url: "/page/44",
             label: "8.Planificación para el crecimiento futuro",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title:
+      "Mejoras Propuestas para la Población de Xochitlán de Todos los Santos",
+    page: "38",
+    section: [
+      { subtitle: "2.Capacitación y educación comunitaria" },
+      {
+        ul: [
+          {
+            strong: "Propuesta",
+            text: "Implementar programas de educación sobre el uso responsable del agua y sobre el mantenimiento de la infraestructura de la red. Esto incluiría la formación de comités comunitarios que supervisen el sistema y aseguren su funcionamiento a largo plazo.",
+          },
+          {
+            strong: "Impacto",
+            text: "Fomentar la participación y sensibilización de la comunidad contribuirá a la sostenibilidad del proyecto, evitando desperdicios y asegurando que se realicen las reparaciones necesarias a tiempo.",
+          },
+        ],
+        links: [
+          {
+            url: "/page/39",
+            label: "3.Sistemas de captación y tratamiento de agua de lluvia",
+          },
+          {
+            url: "/page/40",
+            label:
+              "4.Mejora en la calidad del agua mediante plantas de tratamiento locales",
+          },
+          {
+            url: "/page/41",
+            label:
+              "5.Monitoreo de la calidad del agua y gestión hídrica comunitaria",
+          },
+          {
+            url: "/page/42",
+            label: "6. Manejo equitativo y económico del recurso",
+          },
+          {
+            url: "/page/43",
+            label:
+              "7. Infraestructura resiliente frente a fenómenos climáticos",
+          },
+          {
+            url: "/page/44",
+            label: "8.Planificación para el crecimiento futuro",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title:
+      "Mejoras Propuestas para la Población de Xochitlán de Todos los Santos",
+    page: "39",
+    section: [
+      {
+        subtitle: "3. Sistemas de captación y tratamiento de agua de lluvia",
+        ul: [
+          {
+            strong: "Propuesta",
+            text: "Promover la instalación de sistemas de captación de agua de lluvia en las viviendas, complementados con pequeños sistemas de tratamiento doméstico. Esto podría aliviar la presión sobre las fuentes principales de agua y proporcionar una solución adicional en tiempos de escasez.",
+          },
+          {
+            strong: "Impacto",
+            text: "En una región donde las lluvias pueden ser abundantes en ciertas épocas del año, esta solución ayudaría a diversificar el acceso al agua, permitiendo que las familias dispongan de una fuente secundaria para usos domésticos o de riego.",
+          },
+        ],
+        links: [
+          {
+            url: "/page/40",
+            label:
+              "4.Mejora en la calidad del agua mediante plantas de tratamiento locales",
+          },
+          {
+            url: "/page/41",
+            label:
+              "5.Monitoreo de la calidad del agua y gestión hídrica comunitaria",
+          },
+          {
+            url: "/page/42",
+            label: "6. Manejo equitativo y económico del recurso",
+          },
+          {
+            url: "/page/43",
+            label:
+              "7. Infraestructura resiliente frente a fenómenos climáticos",
+          },
+          {
+            url: "/page/44",
+            label: "8.Planificación para el crecimiento futuro",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title:
+      "Mejoras Propuestas para la Población de Xochitlán de Todos los Santos",
+    page: "40",
+    section: [
+      {
+        subtite:
+          "4. Mejora en la calidad del agua mediante plantas de tratamiento locales",
+        ul: [
+          {
+            strong: "Propuesta",
+            text: "Establecer pequeñas plantas de tratamiento en puntos estratégicos del municipio, que utilicen tecnologías adecuadas al contexto local (filtros biológicos o sistemas de cloración) para asegurar que el agua captada de fuentes naturales sea apta para el consumo humano",
+          },
+          {
+            strong: "Impacto",
+            text: "Impacto: Esta mejora reduciría la prevalencia de enfermedades transmitidas por el agua contaminada, elevando el nivel de salud pública. Además, disminuiría la dependencia de métodos no seguros de captación y consumo de agua.",
+          },
+        ],
+        links: [
+          {
+            url: "/page/41",
+            label:
+              "5.Monitoreo de la calidad del agua y gestión hídrica comunitaria",
+          },
+          {
+            url: "/page/42",
+            label: "6. Manejo equitativo y económico del recurso",
+          },
+          {
+            url: "/page/43",
+            label:
+              "7. Infraestructura resiliente frente a fenómenos climáticos",
+          },
+          {
+            url: "/page/44",
+            label: "8.Planificación para el crecimiento futuro",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title:
+      "Mejoras Propuestas para la Población de Xochitlán de Todos los Santos",
+    page: "41",
+    section: [
+      {
+        subtitle:
+          "5.Monitoreo de la calidad del agua y gestión hídrica comunitaria",
+      },
+      {
+        ul: [
+          {
+            strong: "Propuesta",
+            text: "Implementar un sistema de monitoreo constante de la calidad del agua en las diferentes etapas del proceso de distribución. Esto podría incluir la instalación de sensores y la capacitación de personal local para gestionar el monitoreo y las reparaciones.",
+          },
+          {
+            strong: "Impacto",
+            text: "Garantizar la calidad del agua distribuida evitará que problemas como la contaminación pasen desapercibidos. Además, mejorará la confianza de la población en el sistema de agua potable, favoreciendo la adopción de buenas prácticas de uso y cuidado del recurso.",
+          },
+        ],
+        links: [
+          {
+            url: "/page/42",
+            label: "6. Manejo equitativo y económico del recurso",
+          },
+          {
+            url: "/page/43",
+            label:
+              "7. Infraestructura resiliente frente a fenómenos climáticos",
+          },
+          {
+            url: "/page/44",
+            label: "8.Planificación para el crecimiento futuro",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title:
+      "Mejores Propuestas para la Población de Xochitlán de Todos los Santos",
+    page: "42",
+    section: [
+      {
+        subtitle: "6. Manejo equitativo y económico del recurso",
+        ul: [
+          {
+            strong: "Propuesta",
+            text: "Diseñar un sistema de tarifas ajustado a la capacidad económica de los usuarios, asegurando que todas las familias puedan acceder al agua potable sin comprometer su estabilidad financiera. Podrían establecerse tarifas progresivas, basadas en el consumo de agua o en la capacidad de pago de cada familia",
+          },
+          {
+            strong: "Impacto",
+            text: "Esto garantizaría la viabilidad económica del sistema de agua potable a largo plazo, al mismo tiempo que se evitaría cargar económicamente a las familias más vulnerables. La equidad en el acceso al agua es clave para asegurar el éxito del proyecto en una comunidad con altos niveles de pobreza.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title:
+      "Mejores Propuestas para la Población de Xochitlán de Todos los Santos",
+    page: "43",
+    section: [
+      {
+        subtitle: "7. Infraestructura resiliente frente a fenómenos climáticos",
+        ul: [
+          {
+            strong: "Propuesta",
+            text: "Incorporar en el diseño de la red de agua potable estrategias que la hagan resiliente frente a cambios climáticos, como la construcción de reservas de agua o cisternas comunitarias que puedan ser utilizadas durante temporadas de sequía.",
+          },
+          {
+            strong: "Impacto",
+            text: "Este tipo de infraestructura no solo garantizará el acceso continuo al agua en tiempos de sequía, sino que también preparará al municipio para futuros cambios climáticos, asegurando que el proyecto sea sostenible a largo plazo.",
+          },
+        ],
+        links: [
+          {
+            url: "/page/44",
+            label: "8.Planificación para el crecimiento futuro",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title:
+      "Mejores Propuestas para la Población de Xochitlán de Todos los Santos",
+    page: "44",
+    section: [
+      {
+        subtitle: "8.Planificación para el crecimiento futuro",
+        ul: [
+          {
+            strong: "Propuesta",
+            text: "Diseñar la red de agua potable con capacidad para ser ampliada en función del crecimiento poblacional proyectado para los próximos años. Esto implica tener un sistema escalable, que pueda adaptarse a nuevas demandas sin requerir una reestructuración total.",
+          },
+          {
+            strong: "Impacto",
+            text: "Garantizar que el sistema de agua potable pueda crecer junto con la población evitará problemas de saturación y escasez a futuro, y hará que la infraestructura sea una inversión a largo plazo que beneficie tanto a las generaciones actuales como a las futuras.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Regresar al inicio",
+    page: "45",
+    section: [
+      {
+        links: [
+          {
+            url: "/table",
+            label: "Regresar al inicio",
           },
         ],
       },

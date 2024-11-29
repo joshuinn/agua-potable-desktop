@@ -35,7 +35,9 @@
             :key="itemIndex"
             class="text-gray-700"
           >
-            {{ item }}
+            <strong v-if="item.strong">{{ item.strong }}:</strong>
+
+            {{ item.text }}
           </li>
         </ul>
 

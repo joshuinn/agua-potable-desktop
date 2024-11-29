@@ -238,7 +238,6 @@ export default {
           expanded: false,
         },
 
-
         {
           number: "19",
           title: "Propuesta de Aplicación a Xochitlán de Todos los Santos",
@@ -257,125 +256,130 @@ export default {
             {
               title:
                 "Implementación de tecnologías de tratamiento de agua adecuadas",
-              page: "20",
-            },
-            {
-              title: "Participación activa de la comunidad",
               page: "21",
             },
             {
-              title: "Sostenibilidad y monitoreo",
+              title: "Participación activa de la comunidad",
               page: "22",
             },
             {
-              title: "Modelo económico sostenible",
+              title: "Sostenibilidad y monitoreo",
               page: "23",
+            },
+            {
+              title: "Modelo económico sostenible",
+              page: "24",
             },
           ],
         },
         {
-          number: "24",
+          number: "25",
           title: "Objetivos",
           page: "24",
+          pages: "5",
           expanded: false,
           sections: [
             {
               title: "Objetivo general",
-              page: "24",
-            },
-            {
-              title: "Objetivo Particular I",
               page: "25",
             },
             {
-              title: "Objetivo particular III",
+              title: "Objetivo Particular I",
               page: "26",
             },
             {
-              title: "Objetivo particular IV",
+              title: "Objetivo Particular II",
               page: "27",
+            },
+            {
+              title: "Objetivo particular III",
+              page: "28",
+            },
+            {
+              title: "Objetivo particular IV",
+              page: "29",
             },
           ],
         },
         {
-          number: "28",
+          number: "30",
           title: "Tipo de Población en Xochitlán de Todos los Santos",
-          page: "28",
+          page: "30",
           expanded: false,
           pages: "6",
           sections: [
             {
               title: "Tipo de Población en Xochitlán de Todos los Santos",
-              page: "28",
-            },
-            {
-              title: "Población dispersa",
-              page: "29",
-            },
-            {
-              title: "Alta proporción de población rural",
               page: "30",
             },
             {
-              title: "Niveles de pobreza",
+              title: "Población dispersa",
               page: "31",
             },
             {
-              title: "Acceso limitado a servicios",
+              title: "Alta proporción de población rural",
               page: "32",
             },
             {
-              title: "Diversidad étnica",
+              title: "Niveles de pobreza",
               page: "33",
+            },
+            {
+              title: "Acceso limitado a servicios",
+              page: "34",
+            },
+            {
+              title: "Diversidad étnica",
+              page: "35",
             },
           ],
         },
         {
-          number: "34",
+          number: "36",
           title:
             "Mejoras Propuestas para la Población de Xochitlán de Todos los Santos",
-          page: "34",
+          page: "36",
           expanded: false,
           pages: "9",
           sections: [
             {
               title:
                 "Mejoras Propuestas para la Población de Xochitlán de Todos los Santos",
-              page: "34",
-            },
-            {
-              title: "Mejora en la infraestructura de distribución",
-              page: "35",
-            },
-            {
-              title: "Capacitación y educación comunitaria",
               page: "36",
             },
             {
-              title: "Sistemas de captación y tratamiento de agua de lluvia",
+              title: "Mejora en la infraestructura de distribución",
               page: "37",
+            },
+            {
+              title: "Capacitación y educación comunitaria",
+              page: "38",
+            },
+            {
+              title: "Sistemas de captación y tratamiento de agua de lluvia",
+              page: "39",
             },
             {
               title:
                 "Mejora en la calidad del agua mediante plantas de tratamiento locales",
-              page: "38",
+              page: "40",
             },
             {
               title:
                 "Monitoreo de la calidad del agua y gestión hídrica comunitaria",
-              page: "39",
-            },
-            {
-              title: "Manejo equitativo y económico del recurso",
-              page: "40",
-            },
-            {
-              title: "Infraestructura resiliente frente a fenómenos climáticos",
               page: "41",
             },
             {
-              title: "Planificación para el crecimiento futuro",
+              title: "Manejo equitativo y económico del recurso",
               page: "42",
+            },
+            {
+              title: "Infraestructura resiliente frente a fenómenos climáticos",
+              page: "43",
+            },
+            {
+              title: "Planificación para el crecimiento futuro",
+              page: "44",
             },
           ],
         },
