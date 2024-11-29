@@ -178,7 +178,7 @@
 </template>
 
 <script>
-import { cipuData } from "../assets/data/cipu-data";
+import { cipuData } from "../data/cipu-data";
 import jsPDF from "jspdf";
 import "jspdf-autotable";
 

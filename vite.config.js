@@ -7,6 +7,7 @@ const { defineConfig } = require('vite');
  * https://vitejs.dev/config
  */
 const config = defineConfig({
+    base: './',
     root: Path.join(__dirname, 'src', 'renderer'),
     publicDir: 'public',
     server: {

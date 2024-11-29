@@ -100,7 +100,7 @@
 
 <script>
 import BreadCrumb from "./BreadCrumb.vue";
-import { pages } from "../assets/pages";
+import { pages } from "../data/pages";
 
 export default {
   name: "Page",

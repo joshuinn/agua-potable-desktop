@@ -87,7 +87,7 @@
 </template>
 
 <script>
-import { catalogConcepts } from "../assets/data/catalog-concepts";
+import { catalogConcepts } from "../data/catalog-concepts";
 
 export default {
   name: "Catalog",

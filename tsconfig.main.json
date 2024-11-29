@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ES2022", // Versión de JavaScript generada (puedes usar ESNext si tu entorno lo soporta)
+    "module": "CommonJS", // Electron usa CommonJS para el proceso principal
+    "outDir": "./build/main", // Carpeta donde se generará el código compilado
+    "rootDir": "./src/main", // Carpeta raíz del código fuente
+    "strict": true, // Activa las verificaciones estrictas de TypeScript
+    "esModuleInterop": true, // Permite la interoperabilidad con módulos ES
+    "moduleResolution": "node", // Resolución de módulos estilo Node.js
+    "resolveJsonModule": true, // Permite importar archivos JSON
+    "isolatedModules": false, // No es necesario para el proceso principal
+    "skipLibCheck": true, // Omite la comprobación de tipos en los archivos de declaración
+    "allowSyntheticDefaultImports": true, // Permite importar módulos sin exportaciones predeterminadas
+    "lib": ["ES2022", "DOM"], // Librerías disponibles (DOM es opcional, pero útil para tipos globales)
+    "noImplicitAny": true, // Evita el uso de `any` implícito
+    "baseUrl": ".", // Base para resolver rutas relativas
+    "paths": {
+      "*": ["node_modules/*"] // Configuración de paths (opcional)
+    }
+  },
+  "include": [
+    "src/main/**/*" // Archivos incluidos en la compilación
+  ],
+  "exclude": [
+    "node_modules", // Excluye dependencias
+    "src/renderer", // Excluye el código del renderer
+    "build" // Excluye la carpeta de salida
+  ]
+}
