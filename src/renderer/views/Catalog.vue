@@ -53,7 +53,15 @@
                 class="w-20 p-1 border rounded"
               />
             </td>
-            <td class="border p-2">$ {{ formatNumber(item.priceUnit) }}</td>
+            <td class="border p-2">
+              <input
+                type="number"
+                v-model.number="item.priceUnit"
+                min="0"
+                step="0.01"
+                class="w-24 p-1 border rounded"
+              />
+            </td>
             <td class="border p-2">
               $ {{ formatNumber(item.priceUnit * quantities[item.id]) }}
             </td>
@@ -152,5 +160,5 @@ export default {
 </script>
 
 <style scoped>
-/* Puedes agregar estilos adicionales aquí si lo necesitas */
+/* Estilos personalizados */
 </style>

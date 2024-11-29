@@ -115,19 +115,14 @@ export default {
     return {
       menuItems: [
         {
-          title: "Inicio",
+          title: "Carátula",
           path: "/",
-          icon: Home,
+          icon: Sparkles,
         },
         {
           title: "Tabla de contenido",
           icon: Database,
           path: "/table",
-        },
-        {
-          title: "Carátula",
-          path: "/",
-          icon: Sparkles,
         },
 
         {
