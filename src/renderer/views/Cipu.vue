@@ -45,11 +45,14 @@
               <td class="border p-3">{{ item.clave }}</td>
               <td class="border p-3">{{ item.concepto }}</td>
               <td class="border p-3 text-center">
-                {{
-                  item.pu && item.pu !== "N/A"
-                    ? `$ ${formatNumber(item.pu)}`
-                    : "Informativo"
-                }}
+                <input
+                  type="number"
+                  v-model.number="item.pu"
+                  :disabled="item.pu === 'N/A'"
+                  min="0"
+                  step="0.01"
+                  class="w-24 p-1 border rounded text-center"
+                />
               </td>
               <td class="border p-3 text-center">
                 <input
@@ -252,26 +255,18 @@ export default {
       }
     },
     exportToPDF() {
-      // Crear una instancia de jsPDF
       const doc = new jsPDF();
-
-      // Título del PDF
       doc.setFontSize(16);
       doc.text("Resumen de Items Seleccionados", 14, 20);
-
-      // Crear la tabla con autoTable
       const tableData = this.selectedItems.map((item) => ({
         clave: item.clave,
         concepto: item.concepto,
-        pu: item.pu ? `$ ${this.formatNumber(item.pu)}` : "Informativo",
+        pu: `$ ${this.formatNumber(item.pu)}`,
         cantidad: this.quantities[item.clave] || 0,
-        total: item.pu
-          ? `$ ${this.formatNumber(
-              (this.quantities[item.clave] || 0) * item.pu
-            )}`
-          : "N/A",
+        total: `$ ${this.formatNumber(
+          (this.quantities[item.clave] || 0) * item.pu
+        )}`,
       }));
-
       doc.autoTable({
         startY: 30,
         head: [["Clave", "Concepto", "PU", "Cantidad", "Total"]],
@@ -283,8 +278,6 @@ export default {
           row.total,
         ]),
       });
-
-      // Agregar totales al final del documento
       const finalY = doc.lastAutoTable.finalY + 10;
       doc.setFontSize(12);
       doc.text(`Subtotal: $ ${this.formatNumber(this.subtotal)}`, 14, finalY);
@@ -295,14 +288,8 @@ export default {
       );
       doc.text(`IVA (16%): $ ${this.formatNumber(this.iva)}`, 14, finalY + 20);
       doc.text(`Total: $ ${this.formatNumber(this.total)}`, 14, finalY + 30);
-
-      // Descargar el PDF
       doc.save("Resumen_CIPU.pdf");
     },
   },
 };
 </script>
-
-<style scoped>
-/* Estilos adicionales si se necesitan */
-</style>

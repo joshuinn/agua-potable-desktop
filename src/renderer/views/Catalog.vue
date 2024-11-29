@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto p-4">
-    <!-- Barra de búsqueda y botón de selección -->
+    <!-- Barra de búsqueda y botones -->
     <div class="mb-4 flex gap-4">
       <div class="flex-1">
         <input
@@ -15,6 +15,13 @@
         class="bg-blue-500 text-white px-4 py-2 rounded"
       >
         {{ allSelected ? "Deseleccionar todo" : "Seleccionar todo" }}
+      </button>
+      <button
+        @click="downloadSelected"
+        class="bg-green-500 text-white px-4 py-2 rounded"
+        :disabled="selectedItems.length === 0"
+      >
+        Descargar seleccionados
       </button>
     </div>
 
@@ -95,6 +102,7 @@
 </template>
 
 <script>
+import { jsPDF } from "jspdf"; // Importar jsPDF
 import { catalogConcepts } from "../data/catalog-concepts";
 
 export default {
@@ -154,6 +162,39 @@ export default {
       } else {
         this.selectedItems = this.catalogConcepts.map((item) => item.id);
       }
+    },
+    downloadSelected() {
+      // Crear una instancia de jsPDF
+      const doc = new jsPDF();
+
+      // Título del PDF
+      doc.setFontSize(16);
+      doc.text("Elementos Seleccionados", 10, 10);
+
+      // Agregar encabezados de tabla
+      const headers = [["ID", "Concepto", "Cantidad", "PU", "Subtotal"]];
+      const data = this.selectedItems.map((id) => {
+        const item = this.catalogConcepts.find((c) => c.id === id);
+        const quantity = this.quantities[id];
+        const subtotal = item.priceUnit * quantity;
+        return [
+          item.id,
+          item.concept,
+          quantity,
+          `$${item.priceUnit.toFixed(2)}`,
+          `$${subtotal.toFixed(2)}`,
+        ];
+      });
+
+      // Agregar datos a la tabla
+      doc.autoTable({
+        head: headers,
+        body: data,
+        startY: 20, // Posición inicial
+      });
+
+      // Descargar el PDF
+      doc.save("elementos_seleccionados.pdf");
     },
   },
 };

@@ -45,7 +45,7 @@
           <span class="font-semibold">Integrantes:</span>
           <ul class="ml-8 mt-2 space-y-2">
             <li class="text-gray-600">• GONZÁLEZ PAZ EFRAÍN</li>
-            <li class="text-gray-600">• Meraz Hernández Gerardo</li>
+            <li class="text-gray-600">• Méndez Hernández Gerardo</li>
           </ul>
         </li>
 
